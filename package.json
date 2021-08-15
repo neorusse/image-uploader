@@ -4,7 +4,8 @@
   "description": "A service that compresses an images and store it in a Google Cloud Storage Bucket and then an SMS to Web Admin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,14 @@
   },
   "homepage": "https://github.com/neorusse/image-processor#readme",
   "dependencies": {
+    "@google-cloud/storage": "^5.13.0",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "multer": "^1.4.3",
-    "sharp": "^0.28.3"
+    "twilio": "^3.67.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
   }
 }
